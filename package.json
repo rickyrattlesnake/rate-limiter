@@ -1,18 +1,38 @@
 {
-  "name": "rate-limit",
+  "name": "simple-rate-limiter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple NodeJs rate limiter, to apply on to http(s) servers",
+  "author": "Ricky Ratnayake",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "lint": "tslint src/**/*",
+    "prepare": "npm run build",
+    "test": "mocha --require ts-node/register \"src/**/*spec.ts\" --watch-extensions ts"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "typescript": "^3.1.6"
-  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "dependencies": {},
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/express": "^4.16.0",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.5",
+    "@types/redis": "^2.8.7",
+    "@types/sinon": "^5.0.5",
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
     "mocha": "^5.2.0",
-    "proxyquire": "^2.1.0"
+    "proxyquire": "^2.1.0",
+    "redis": "^2.8.0",
+    "redis-mock": "^0.39.0",
+    "sinon": "^6.3.5",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
   }
 }

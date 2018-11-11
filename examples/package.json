@@ -1,0 +1,16 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "examples to test rate-limiter",
+  "main": "index.js",
+  "scripts": {
+    "examples:http-server:simple": "ts-node ./http-server/simpleRateLimiter.ts",
+    "examples:http-server:wrapper": "ts-node ./http-server/wrapperRateLimiter.ts"
+  },
+  "author": "ricky rattlesnake",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "ts-node": "^7.0.1"
+  }
+}
