@@ -7,13 +7,12 @@
     "noImplicitAny": true,
     "outDir": "dist",
     "removeComments": true,
-    "rootDir": "src",
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "ES2017"
   },
   "include": [
-    "src/**/*"
+    "http-server/**/*"
   ],
   "exclude": [
     "node_modules/**/*",

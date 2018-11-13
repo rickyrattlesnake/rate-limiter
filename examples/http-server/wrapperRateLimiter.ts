@@ -4,8 +4,8 @@ import { HttpRateLimiterFactory } from '../../';
 const PORT = process.env.PORT || 3000;
 
 const { wrapper } = HttpRateLimiterFactory.build({
-  allowedRequestsWithinInterval: 1,
-  intervalMs: 10000,
+  allowedRequestsWithinInterval: 100,
+  intervalMs: 10 * 1000,
 });
 
 const server = createServer(wrapper((req, res) => {
